@@ -1,13 +1,11 @@
 /**
  * @license MIT
  * @fileoverview All api related stuff like api_key, api request etc.
- * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
  */
 
 'use strict'
 
-const api_key = "0e8de6cee07fc0ee733219d0f666287f";
+const api_key = "0e67979265807052247d40530acbaf01";
 
 /**
  * 
@@ -15,7 +13,7 @@ const api_key = "0e8de6cee07fc0ee733219d0f666287f";
  * @param {function} callback callback
  */
 export const fetchData = function(URL,callback){
-    fetch(`{URL}&appid=${api_key}`)
+    fetch(`${URL}&appid=${api_key}`)
     .then(res => res.json())
     .then(data => callback(data));
 }
